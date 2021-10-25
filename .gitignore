@@ -1,0 +1,6 @@
+# Ignore directories
+.terraform/
+.vscode/
+
+# Ignore private keys
+*.pem

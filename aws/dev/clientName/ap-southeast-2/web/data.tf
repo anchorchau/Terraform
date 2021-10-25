@@ -5,5 +5,7 @@ module "common_data" {
 
 module "aws_data" {
     # Unfortunately, we can't pass variable into source.
-    source = "../../../../../modules/data-only/aws/dev" 
+    source = "../../../../../modules/data-only/aws/dev"
+
+    default_tags = module.common_data.tags
 }

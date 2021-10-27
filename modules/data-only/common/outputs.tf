@@ -20,9 +20,9 @@ output "environment" {
 
 output "tags" {
   value = {
-    stack       = local.dir_to_list[0]
-    region      = local.dir_to_list[1]
-    owner       = local.dir_to_list[2]
-    environment = local.dir_to_list[3]
+    Stack       = local.dir_to_list[0]
+    Region      = local.dir_to_list[1]
+    Owner       = local.dir_to_list[2]
+    Environment = local.dir_to_list[3]
   }
 }

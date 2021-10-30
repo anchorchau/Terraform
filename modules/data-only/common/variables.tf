@@ -3,3 +3,8 @@ variable "dir_path" {
   default     = ""
   description = "Directory path of TF"
 }
+
+variable "root_dir" {
+  type = string
+  default = "Terraform"
+}

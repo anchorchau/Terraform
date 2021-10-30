@@ -2,8 +2,9 @@
 .terraform/
 .vscode/
 
-# Ignore directories
+# Ignore files
 .terraform*
+*.tfstate*
 
 # Ignore private keys
 *.pem

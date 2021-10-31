@@ -1,13 +1,7 @@
 module "common_data" {
-    source = "../../../../../modules/data-only/common"
+    source = "../../../../../modules/data-only/aws"
     dir_path = path.cwd
 }
-
-module "aws_data" {
-    # Unfortunately, we can't pass variable into source.
-    source = "../../../../../modules/data-only/aws/dev"
-}
-
 
 provider "aws" {
     region                  = module.common_data.region
@@ -19,6 +13,6 @@ provider "aws" {
   }
 }
 
-# output "region" {
-#   value = module.common_data.region
-# }
+terraform {
+  backend "s3" {}
+}

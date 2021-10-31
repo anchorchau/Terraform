@@ -9,6 +9,8 @@ What I've learnt with Terraform
 ## DRY Principles
 In order to achieve DRY principles in coding, we have to install Terraform Wrapper like [Terragrunt](https://terragrunt.gruntwork.io/) or [tfwrapper](https://github.com/claranet/terraform-wrapper). The only thing we need this is because of **Terraform Backend Configuration blocks do not allow variables**.
 
+Based on my experience, we can't fully implement DRY principle without a wrapper. Nonetheless, I'm trying to not rely on wrapper by making the *init.tf* much more copyable.
+
 ## Utilise Public Registry Modules
 The only thing I need to remind myself or highly recommend for new beginner, is to fully utilise the [public registry module](https://registry.terraform.io/browse/modules). The reason being they are battle-tested and production ready. Imagine the module has been installed and used by thousand of developers. Furthermore, you can fix the bug of the module if you find it. Indirectly, you will become the contributor and increase your reputation in the Github.
 

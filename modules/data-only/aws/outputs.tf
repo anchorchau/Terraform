@@ -29,11 +29,16 @@ output "stack" {
     value = local.stack
 }
 
+output "account_id" {
+  value = local.account_id[local.true_dirs_list[2]]
+}
+
 output "tags" {
   value = {
     Environment = local.true_dirs_list[2]
     Owner       = local.true_dirs_list[3]
     Region      = local.true_dirs_list[4]
     Stack       = local.stack
+    Terraform   = true
   }
 }

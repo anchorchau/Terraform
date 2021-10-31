@@ -1,11 +1,6 @@
 module "common_data" {
-    source = "../../../../../modules/data-only/common"
+    source = "../../../../../modules/data-only/aws"
     dir_path = path.cwd
-}
-
-module "aws_data" {
-    # Unfortunately, we can't pass variable into source.
-    source = "../../../../../modules/data-only/aws/dev"
 }
 
 provider "aws" {
@@ -18,13 +13,6 @@ provider "aws" {
   }
 }
 
-# terraform {
-#   backend "s3" {
-#     profile        = "soulmachines-legacy"
-#     session_name   = "chau-learning-terraform"
-#     bucket         = "chau-tfstate-bucket"
-#     key            = "${module.common_data.backend_key_path}.tfstate"
-#     region         = "ap-southeast-1"
-#     encrypt        = true
-#   }
-# }
+terraform {
+  backend "s3" {}
+}
